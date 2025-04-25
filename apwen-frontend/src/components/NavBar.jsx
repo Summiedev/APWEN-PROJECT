@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Menu, X, UserCircle } from "lucide-react"; // Icons
-import Laogo from "../assets/logo-light.png"; // Adjust your logo import
+import { Menu, X, UserCircle } from "lucide-react"; 
+import Laogo from "../assets/logo-light.png"; 
 
 export default function Navbar({ isLoggedIn, setOpen }) {
   const [menuOpen, setMenuOpen] = useState(false);
