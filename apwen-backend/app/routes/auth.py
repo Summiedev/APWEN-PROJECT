@@ -1,18 +1,15 @@
-from flask import Flask, redirect, url_for, session, request, jsonify
+from flask import Blueprint, redirect, url_for, session, request, jsonify
 from authlib.integrations.flask_client import OAuth
 from flask_login import LoginManager, login_user, logout_user, login_required, UserMixin
 from dotenv import load_dotenv
 import os
+import uuid
 
-# Load .env variables
+# Load environment variables
 load_dotenv()
 
-app = Flask(__name__)
-app.secret_key = os.getenv("SECRET_KEY")
-
-# Flask-Login setup
+auth_bp = Blueprint("auth", __name__)
 login_manager = LoginManager()
-login_manager.init_app(app)
 
 # In-memory user store
 users = {}
@@ -27,49 +24,48 @@ class User(UserMixin):
 def load_user(user_id):
     return users.get(user_id)
 
-# Authlib Google OAuth
-oauth = OAuth(app)
+# OAuth setup
+oauth = OAuth()
 google = oauth.register(
     name='google',
     client_id=os.getenv("GOOGLE_CLIENT_ID"),
     client_secret=os.getenv("GOOGLE_CLIENT_SECRET"),
-    access_token_url='https://oauth2.googleapis.com/token',
-    authorize_url='https://accounts.google.com/o/oauth2/v2/auth',
-    userinfo_endpoint='https://openidconnect.googleapis.com/v1/userinfo',
+    server_metadata_url='https://accounts.google.com/.well-known/openid-configuration',
     client_kwargs={'scope': 'openid email profile'},
 )
 
 # Routes
-@app.route("/")
+@auth_bp.route("/")
 def home():
     return "Welcome to SmartMaterial"
 
-@app.route("/login")
+@auth_bp.route("/login")
 def login():
-    redirect_uri = url_for("authorize", _external=True)
-    return google.authorize_redirect(redirect_uri)
+    nonce = str(uuid.uuid4())
+    session["nonce"] = nonce
+    redirect_uri = url_for("auth.authorize", _external=True)
+    return google.authorize_redirect(redirect_uri, nonce=nonce)
 
-@app.route("/authorize")
+@auth_bp.route("/authorize")
 def authorize():
     token = google.authorize_access_token()
-    resp = google.get("userinfo")
-    user_info = resp.json()
-    user_id = user_info["sub"]
+    nonce = session.pop("nonce", None)
+    user_info = google.parse_id_token(token, nonce=nonce)
 
+    user_id = user_info["sub"]
     user = User(id_=user_id, name=user_info["name"], email=user_info["email"])
     users[user_id] = user
     login_user(user)
 
-    
-    return redirect("http://localhost:5173/dashboard")  # adjust to your route
+    return redirect("http://localhost:5173")  # Adjust as needed
 
-@app.route("/logout")
+@auth_bp.route("/logout")
 @login_required
 def logout():
     logout_user()
     return redirect("/")
 
-@app.route("/api/user")
+@auth_bp.route("/user")
 @login_required
 def get_user():
     user = users.get(session["_user_id"])
@@ -77,6 +73,3 @@ def get_user():
         "name": user.name,
         "email": user.email
     })
-
-if __name__ == "__main__":
-    app.run(debug=True)

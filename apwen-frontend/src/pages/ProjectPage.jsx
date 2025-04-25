@@ -26,7 +26,7 @@ export default function ProjectPage() {
 
   // 🧠 Check if the user is logged in (session exists)
   useEffect(() => {
-    fetch("http://localhost:5000/api/user", {
+    fetch("http://127.0.0.1:5000/api/user", {
       method: "GET",
       credentials: "include", // VERY IMPORTANT! Sends cookies to Flask
     })
@@ -80,11 +80,11 @@ export default function ProjectPage() {
   };
 
   const handleGoogleLogin = () => {
-    window.location.href = "http://localhost:5000/auth/login"; // Redirect to Flask Google login
+    window.location.href = "http://localhost:5000/api/login"; // Redirect to Flask Google login
   };
 
   const handleLogout = () => {
-    fetch("http://localhost:5000/auth/logout", {
+    fetch("http://localhost:5000/api/logout", {
       method: "POST",
       credentials: "include",
     })

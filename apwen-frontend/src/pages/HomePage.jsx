@@ -60,7 +60,7 @@ const Home = () => {
       <header className="flex justify-between items-center px-6 py-4 ">
       <img src={Logo} alt="Logo" className="h-8" />
         <nav className="space-x-6 poppins-medium hidden md:flex">
-          <a href="#" className="text-black  hover:text-black">Home</a>
+          <a href="/" className="text-black  hover:text-black">Home</a>
           <a href="/projects" className="text-black hover:text-black">Projects</a>
           <a href="#" className="text-black hover:text-black">Blog</a>
           <a href="#" className="text-black hover:text-black">FAQ</a>
@@ -85,7 +85,7 @@ const Home = () => {
       </section>
 
       
-      <section className="bg-gray-50 py-16 px-6">
+      <section className="bg-red-50 py-16 px-6">
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
         <div className="text-center mb-12">
@@ -254,7 +254,7 @@ const Home = () => {
               </p>
 
               {/* Google Button */}
-              <button button onClick={() => window.location.href = "http://localhost:5000/auth/login"} className="flex items-center cursor-pointer justify-center w-full mt-6 border rounded-lg py-3 px-4 hover:bg-gray-50 transition gap-2">
+              <button button onClick={() => window.location.href = "http://localhost:5000/api/login"} className="flex items-center cursor-pointer justify-center w-full mt-6 border rounded-lg py-3 px-4 hover:bg-gray-50 transition gap-2">
                 <FcGoogle size={22} />
                 <span className="text-gray-700 font-medium">
                   Continue with Google
