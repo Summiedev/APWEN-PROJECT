@@ -1,0 +1,101 @@
+Bridge Type,Environment,Load Requirement (kN),Budget (?/kg),Sustainability Priority (1-10),Deck Material,Girders Material,Piers Material,Cables Material,Bearings Material
+Pedestrian,Humid,1250,5000,10,Reinforced Concrete,Steel I-Beam,Steel Column,None,Neoprene
+Arch,Coastal,1393,5000,9,Concrete Slab,Reinforced Concrete Arch,Reinforced Concrete,Parallel Strand Steel,Neoprene
+Highway,Desert,1191,2000,1,Prestressed Concrete,Box Girder (Concrete),Concrete Core,None,Elastomeric Bearing
+Suspension,Humid,1060,2000,8,Steel Plate Deck,High Strength Steel,Reinforced Concrete,High Tensile Steel,Neoprene
+Suspension,Desert,1397,7000,10,Orthotropic Steel Deck,Steel Box Girder,Steel Column,High Tensile Steel,Roller Bearings
+Arch,Humid,403,2000,8,Concrete Slab,Reinforced Concrete Arch,Concrete Core,Locked Coil Cable,Elastomeric Bearing
+Highway,Cold,806,4000,4,Reinforced Concrete,Steel Girder,Prestressed Concrete,Locked Coil Cable,PTFE Sliding Bearing
+Arch,Cold,634,3000,7,Concrete Slab,Steel Truss,Prestressed Concrete,High Tensile Steel,Roller Bearings
+Highway,Desert,1326,4000,6,Reinforced Concrete,Steel Girder,Prestressed Concrete,Locked Coil Cable,PTFE Sliding Bearing
+Highway,Coastal,353,8000,8,Prestressed Concrete,Steel Girder,Concrete Core,None,Neoprene
+Cable-Stayed,Humid,993,3000,2,Reinforced Concrete,Steel I-Beam,Prestressed Concrete,Locked Coil Cable,Spherical Bearings
+Pedestrian,Coastal,1168,7000,10,Steel Grid Deck,Steel I-Beam,Reinforced Concrete,None,PTFE Sliding Bearing
+Arch,Humid,786,3000,7,Steel Grid Deck,Steel Truss,Prestressed Concrete,Locked Coil Cable,Spherical Bearings
+Highway,Desert,895,4000,10,Reinforced Concrete,Steel Girder,Prestressed Concrete,High Tensile Steel,Elastomeric Bearing
+Suspension,Cold,782,4000,5,Steel Plate Deck,Steel Box Girder,Concrete Core,Parallel Strand Steel,Elastomeric Bearing
+Arch,Humid,543,8000,6,Concrete Slab,Reinforced Concrete Arch,Steel Column,Locked Coil Cable,PTFE Sliding Bearing
+Arch,Humid,611,2000,8,Concrete Slab,Reinforced Concrete Arch,Steel Column,Locked Coil Cable,Spherical Bearings
+Suspension,Desert,719,8000,7,Orthotropic Steel Deck,Steel Box Girder,Concrete Core,High Tensile Steel,Roller Bearings
+Highway,Desert,911,2000,2,Prestressed Concrete,Steel Girder,Steel Column,None,PTFE Sliding Bearing
+Arch,Coastal,391,2000,4,Steel Grid Deck,Steel Truss,Concrete Core,High Tensile Steel,Roller Bearings
+Arch,Coastal,505,5000,10,Steel Grid Deck,Reinforced Concrete Arch,Concrete Core,Parallel Strand Steel,Elastomeric Bearing
+Highway,Humid,1323,5000,6,Prestressed Concrete,Steel Girder,Concrete Core,Parallel Strand Steel,Spherical Bearings
+Highway,Desert,961,2000,1,Reinforced Concrete,Steel Girder,Concrete Core,None,Neoprene
+Highway,Humid,1139,2000,6,Reinforced Concrete,Steel Girder,Reinforced Concrete,Locked Coil Cable,Roller Bearings
+Cable-Stayed,Cold,1327,4000,9,Orthotropic Steel Deck,Steel I-Beam,Steel Column,High Tensile Steel,Elastomeric Bearing
+Pedestrian,Cold,1298,3000,3,Steel Grid Deck,Steel I-Beam,Concrete Core,None,Roller Bearings
+Highway,Coastal,989,2000,8,Prestressed Concrete,Box Girder (Concrete),Steel Column,None,Elastomeric Bearing
+Suspension,Coastal,1385,8000,8,Orthotropic Steel Deck,High Strength Steel,Steel Column,None,Roller Bearings
+Pedestrian,Desert,1099,7000,9,Timber Plank,Precast Concrete Beam,Concrete Core,None,Roller Bearings
+Highway,Humid,648,2000,9,Prestressed Concrete,Box Girder (Concrete),Reinforced Concrete,None,PTFE Sliding Bearing
+Suspension,Coastal,1052,2000,6,Orthotropic Steel Deck,Steel Box Girder,Prestressed Concrete,Parallel Strand Steel,Neoprene
+Highway,Cold,766,8000,2,Reinforced Concrete,Steel Girder,Steel Column,High Tensile Steel,PTFE Sliding Bearing
+Cable-Stayed,Cold,919,8000,4,Orthotropic Steel Deck,Steel I-Beam,Concrete Core,Parallel Strand Steel,Spherical Bearings
+Pedestrian,Desert,372,3000,7,Steel Grid Deck,Steel I-Beam,Steel Column,None,Elastomeric Bearing
+Cable-Stayed,Humid,644,8000,3,Orthotropic Steel Deck,Composite I-Girder,Reinforced Concrete,None,Spherical Bearings
+Cable-Stayed,Cold,1020,7000,3,Reinforced Concrete,Steel I-Beam,Concrete Core,Locked Coil Cable,Elastomeric Bearing
+Suspension,Coastal,744,8000,10,Orthotropic Steel Deck,Steel Box Girder,Steel Column,High Tensile Steel,PTFE Sliding Bearing
+Suspension,Desert,532,8000,2,Orthotropic Steel Deck,High Strength Steel,Prestressed Concrete,None,Neoprene
+Pedestrian,Humid,682,8000,10,Timber Plank,Precast Concrete Beam,Steel Column,None,Spherical Bearings
+Cable-Stayed,Coastal,472,2000,9,Orthotropic Steel Deck,Composite I-Girder,Prestressed Concrete,None,PTFE Sliding Bearing
+Suspension,Humid,877,4000,2,Steel Plate Deck,Steel Box Girder,Steel Column,None,PTFE Sliding Bearing
+Highway,Coastal,1249,8000,9,Reinforced Concrete,Steel Girder,Concrete Core,High Tensile Steel,PTFE Sliding Bearing
+Pedestrian,Desert,1113,2000,1,Reinforced Concrete,Steel I-Beam,Concrete Core,None,Roller Bearings
+Suspension,Desert,361,4000,2,Steel Plate Deck,Steel Box Girder,Prestressed Concrete,Parallel Strand Steel,Spherical Bearings
+Highway,Humid,893,7000,5,Prestressed Concrete,Box Girder (Concrete),Prestressed Concrete,High Tensile Steel,Spherical Bearings
+Arch,Humid,1117,5000,4,Steel Grid Deck,Reinforced Concrete Arch,Concrete Core,Locked Coil Cable,Roller Bearings
+Suspension,Humid,547,3000,2,Steel Plate Deck,High Strength Steel,Reinforced Concrete,Locked Coil Cable,Neoprene
+Highway,Humid,732,4000,1,Reinforced Concrete,Box Girder (Concrete),Prestressed Concrete,Locked Coil Cable,PTFE Sliding Bearing
+Cable-Stayed,Coastal,1015,7000,7,Orthotropic Steel Deck,Composite I-Girder,Concrete Core,Locked Coil Cable,Roller Bearings
+Pedestrian,Coastal,891,3000,3,Steel Grid Deck,Steel I-Beam,Concrete Core,None,Elastomeric Bearing
+Cable-Stayed,Cold,1358,2000,5,Orthotropic Steel Deck,Steel I-Beam,Reinforced Concrete,None,PTFE Sliding Bearing
+Suspension,Desert,472,2000,8,Orthotropic Steel Deck,High Strength Steel,Reinforced Concrete,Locked Coil Cable,Roller Bearings
+Highway,Cold,1062,8000,2,Reinforced Concrete,Steel Girder,Prestressed Concrete,None,Spherical Bearings
+Arch,Cold,1000,3000,7,Steel Grid Deck,Reinforced Concrete Arch,Concrete Core,High Tensile Steel,PTFE Sliding Bearing
+Suspension,Desert,912,4000,1,Orthotropic Steel Deck,High Strength Steel,Steel Column,None,Elastomeric Bearing
+Cable-Stayed,Desert,702,8000,5,Orthotropic Steel Deck,Steel I-Beam,Steel Column,Parallel Strand Steel,Elastomeric Bearing
+Arch,Humid,1427,5000,7,Concrete Slab,Steel Truss,Concrete Core,High Tensile Steel,Spherical Bearings
+Cable-Stayed,Coastal,402,8000,10,Orthotropic Steel Deck,Composite I-Girder,Reinforced Concrete,Parallel Strand Steel,Elastomeric Bearing
+Pedestrian,Desert,1488,4000,1,Timber Plank,Steel I-Beam,Reinforced Concrete,None,Spherical Bearings
+Highway,Coastal,1413,4000,9,Reinforced Concrete,Box Girder (Concrete),Prestressed Concrete,Parallel Strand Steel,Roller Bearings
+Highway,Coastal,1456,2000,7,Prestressed Concrete,Steel Girder,Concrete Core,None,Neoprene
+Cable-Stayed,Humid,814,8000,7,Reinforced Concrete,Composite I-Girder,Steel Column,None,Spherical Bearings
+Arch,Humid,1260,7000,7,Concrete Slab,Reinforced Concrete Arch,Concrete Core,Locked Coil Cable,Spherical Bearings
+Arch,Humid,827,4000,2,Steel Grid Deck,Reinforced Concrete Arch,Reinforced Concrete,Parallel Strand Steel,Elastomeric Bearing
+Cable-Stayed,Humid,482,4000,4,Orthotropic Steel Deck,Composite I-Girder,Steel Column,Locked Coil Cable,Spherical Bearings
+Highway,Desert,1203,8000,9,Reinforced Concrete,Steel Girder,Steel Column,Locked Coil Cable,Neoprene
+Suspension,Coastal,1365,7000,6,Orthotropic Steel Deck,Steel Box Girder,Reinforced Concrete,Locked Coil Cable,Elastomeric Bearing
+Pedestrian,Coastal,897,4000,3,Reinforced Concrete,Precast Concrete Beam,Prestressed Concrete,None,PTFE Sliding Bearing
+Arch,Humid,385,2000,7,Concrete Slab,Reinforced Concrete Arch,Concrete Core,None,Elastomeric Bearing
+Cable-Stayed,Coastal,452,2000,4,Reinforced Concrete,Steel I-Beam,Reinforced Concrete,None,Roller Bearings
+Highway,Humid,1406,3000,3,Prestressed Concrete,Box Girder (Concrete),Reinforced Concrete,Locked Coil Cable,Spherical Bearings
+Cable-Stayed,Coastal,341,8000,7,Orthotropic Steel Deck,Steel I-Beam,Prestressed Concrete,Locked Coil Cable,Roller Bearings
+Suspension,Humid,731,7000,8,Orthotropic Steel Deck,High Strength Steel,Reinforced Concrete,Locked Coil Cable,Roller Bearings
+Cable-Stayed,Cold,893,7000,4,Orthotropic Steel Deck,Steel I-Beam,Concrete Core,None,Neoprene
+Cable-Stayed,Humid,716,8000,7,Reinforced Concrete,Steel I-Beam,Steel Column,None,Neoprene
+Highway,Coastal,530,7000,10,Prestressed Concrete,Steel Girder,Concrete Core,None,Roller Bearings
+Cable-Stayed,Humid,1232,4000,2,Orthotropic Steel Deck,Steel I-Beam,Reinforced Concrete,Parallel Strand Steel,Elastomeric Bearing
+Arch,Coastal,1338,4000,1,Concrete Slab,Reinforced Concrete Arch,Reinforced Concrete,None,Elastomeric Bearing
+Highway,Coastal,554,4000,6,Prestressed Concrete,Steel Girder,Reinforced Concrete,High Tensile Steel,PTFE Sliding Bearing
+Arch,Desert,1331,4000,6,Steel Grid Deck,Reinforced Concrete Arch,Reinforced Concrete,High Tensile Steel,Roller Bearings
+Arch,Coastal,793,7000,8,Steel Grid Deck,Steel Truss,Concrete Core,High Tensile Steel,Spherical Bearings
+Pedestrian,Humid,1209,7000,9,Reinforced Concrete,Precast Concrete Beam,Steel Column,None,Neoprene
+Pedestrian,Humid,1400,2000,2,Timber Plank,Precast Concrete Beam,Concrete Core,None,PTFE Sliding Bearing
+Suspension,Desert,1110,5000,7,Steel Plate Deck,High Strength Steel,Steel Column,High Tensile Steel,PTFE Sliding Bearing
+Cable-Stayed,Coastal,447,5000,2,Orthotropic Steel Deck,Steel I-Beam,Concrete Core,Parallel Strand Steel,PTFE Sliding Bearing
+Suspension,Coastal,834,5000,1,Steel Plate Deck,Steel Box Girder,Reinforced Concrete,Parallel Strand Steel,Neoprene
+Highway,Cold,1080,5000,7,Prestressed Concrete,Steel Girder,Prestressed Concrete,High Tensile Steel,Neoprene
+Suspension,Humid,1320,7000,4,Steel Plate Deck,Steel Box Girder,Steel Column,None,PTFE Sliding Bearing
+Suspension,Cold,1483,4000,8,Orthotropic Steel Deck,Steel Box Girder,Steel Column,High Tensile Steel,PTFE Sliding Bearing
+Cable-Stayed,Coastal,1443,8000,2,Reinforced Concrete,Steel I-Beam,Concrete Core,Parallel Strand Steel,PTFE Sliding Bearing
+Arch,Desert,1276,3000,4,Steel Grid Deck,Steel Truss,Steel Column,None,PTFE Sliding Bearing
+Pedestrian,Cold,1324,2000,10,Steel Grid Deck,Precast Concrete Beam,Prestressed Concrete,None,Neoprene
+Cable-Stayed,Humid,347,8000,5,Orthotropic Steel Deck,Steel I-Beam,Reinforced Concrete,None,Neoprene
+Suspension,Humid,985,3000,5,Steel Plate Deck,Steel Box Girder,Steel Column,Parallel Strand Steel,Spherical Bearings
+Cable-Stayed,Desert,1320,3000,8,Orthotropic Steel Deck,Composite I-Girder,Reinforced Concrete,High Tensile Steel,Spherical Bearings
+Pedestrian,Cold,1273,2000,7,Timber Plank,Precast Concrete Beam,Reinforced Concrete,None,Roller Bearings
+Cable-Stayed,Humid,467,7000,1,Reinforced Concrete,Composite I-Girder,Steel Column,High Tensile Steel,Roller Bearings
+Cable-Stayed,Coastal,878,2000,4,Reinforced Concrete,Composite I-Girder,Prestressed Concrete,None,Roller Bearings
+Cable-Stayed,Coastal,944,5000,4,Reinforced Concrete,Steel I-Beam,Steel Column,None,PTFE Sliding Bearing
+Highway,Humid,384,8000,9,Reinforced Concrete,Box Girder (Concrete),Reinforced Concrete,Parallel Strand Steel,Spherical Bearings

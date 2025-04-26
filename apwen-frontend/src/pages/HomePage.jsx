@@ -13,6 +13,7 @@ import bro from '../assets/bro.png'
 import { CheckCircle,X } from 'lucide-react'
 import FAQSection from '../components/FaQuestion';
 import { FcGoogle } from "react-icons/fc"; 
+import Navbar from '../components/NavBar';
 
 const Home = () => {
     const [open, setOpen] = useState(false);
@@ -55,9 +56,9 @@ const Home = () => {
         },
       ];
   return (
-    <div className="bg-white text-gray-900">
+    <div className="bg-white px-2  text-gray-900">
       {/* Navigation */}
-      <header className="flex justify-between items-center px-6 py-4 ">
+      {/* <header className="flex justify-between items-center px-6 py-4 ">
       <img src={Logo} alt="Logo" className="h-8" />
         <nav className="space-x-6 poppins-medium hidden md:flex">
           <a href="/" className="text-black  hover:text-black">Home</a>
@@ -69,7 +70,8 @@ const Home = () => {
          
           <button onClick={() => setOpen(true)} className="bg-[#3C6DD8]  cursor-pointer  text-white px-4 py-2 rounded-4xl text-sm">Get Started</button>
         </div>
-      </header>
+      </header> */}
+      <Navbar/>
 
       {/* Hero Section */}
       <section className="text-center jakarta-font py-20 px-6 bg-white">
