@@ -4,7 +4,7 @@ import Navbar from "../components/NavBar";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
 
-export default function ProjectPage() {
+const ProjectPage=()=> {
 
 
   const [formData, setFormData] = useState({
@@ -302,3 +302,4 @@ export default function ProjectPage() {
     </>
   );
 }
+export default ProjectPage;
