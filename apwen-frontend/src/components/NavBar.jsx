@@ -24,7 +24,7 @@ export default function Navbar({ }) {
           <a href="/" className="text-black hover:text-black">
             Home
           </a>
-          <a href="/Projects" className="text-black hover:text-black">
+          <a href="/projects" className="text-black hover:text-black">
             Projects
           </a>
           <a href="#BLOG" className="text-black hover:text-black">

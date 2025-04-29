@@ -111,7 +111,7 @@ const Home = () => {
             <p className="text-gray-600 mb-6">
             Make fast, informed decisions on-site. SmartMaterial's instant recommendations help validate material choices under tight deadlines, ensuring durability and cost-efficiency for your builds.
             </p>
-            <a href="/Projects" className="font-semibold inline-flex items-center">
+            <a href="/projects" className="font-semibold inline-flex items-center">
               Learn more
               <span className="ml-1">→</span>
             </a>
@@ -128,7 +128,7 @@ const Home = () => {
 
 
             </p>
-            <a href="/Projects" className=" font-semibold inline-flex items-center">
+            <a href="/projects" className=" font-semibold inline-flex items-center">
               Learn more
               <span className="ml-1">→</span>
             </a>
@@ -145,7 +145,7 @@ const Home = () => {
             Get eco-conscious material options that align with your cost
             limits without compromising performance.
             </p>
-            <a href="/Projects" className=" font-semibold inline-flex items-center">
+            <a href="/projects" className=" font-semibold inline-flex items-center">
               Learn more
               <span className="ml-1">→</span>
             </a>
@@ -161,7 +161,7 @@ const Home = () => {
             From mechanical engineers to product designers, SmartMaterial
             fits into your workflow, no learning curve needed.
             </p>
-            <a href="/Projects" className=" font-semibold inline-flex items-center">
+            <a href="/projects" className=" font-semibold inline-flex items-center">
               Learn more
               <span className="ml-1">→</span>
             </a>
