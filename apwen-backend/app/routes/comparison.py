@@ -3,7 +3,7 @@ import json, os
 
 comparison_bp = Blueprint("comparison", __name__)
 
-@comparison_bp.route("/materials/comparison", methods=["POST"])
+@comparison_bp.route("/comparison", methods=["POST"])
 def compare():
     data = request.json.get("materials", [])
     with open(os.path.join("app", "data", "materials.json")) as f:

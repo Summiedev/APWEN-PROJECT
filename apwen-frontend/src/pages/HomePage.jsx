@@ -111,7 +111,7 @@ const Home = () => {
             <p className="text-gray-600 mb-6">
             Make fast, informed decisions on-site. SmartMaterial's instant recommendations help validate material choices under tight deadlines, ensuring durability and cost-efficiency for your builds.
             </p>
-            <a href="#" className="font-semibold inline-flex items-center">
+            <a href="/Projects" className="font-semibold inline-flex items-center">
               Learn more
               <span className="ml-1">→</span>
             </a>
@@ -128,7 +128,7 @@ const Home = () => {
 
 
             </p>
-            <a href="#" className=" font-semibold inline-flex items-center">
+            <a href="/Projects" className=" font-semibold inline-flex items-center">
               Learn more
               <span className="ml-1">→</span>
             </a>
@@ -145,7 +145,7 @@ const Home = () => {
             Get eco-conscious material options that align with your cost
             limits without compromising performance.
             </p>
-            <a href="#" className=" font-semibold inline-flex items-center">
+            <a href="/Projects" className=" font-semibold inline-flex items-center">
               Learn more
               <span className="ml-1">→</span>
             </a>
@@ -161,7 +161,7 @@ const Home = () => {
             From mechanical engineers to product designers, SmartMaterial
             fits into your workflow, no learning curve needed.
             </p>
-            <a href="#" className=" font-semibold inline-flex items-center">
+            <a href="/Projects" className=" font-semibold inline-flex items-center">
               Learn more
               <span className="ml-1">→</span>
             </a>
@@ -236,43 +236,7 @@ const Home = () => {
         © 2025 SmartMaterials. All rights reserved
       </footer>
         {/* Modal */}
-        {open && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
-          <div className="relative bg-white rounded-2xl w-full max-w-md mx-auto p-8">
-         
-            <button
-              onClick={() => setOpen(false)}
-              className="absolute top-4 right-4 text-gray-400 hover:text-gray-600"
-            >
-              <X size={24} />
-            </button>
-
-            
-            <div className="flex flex-col items-center space-y-4">
-              <img src={Logo} className="w-50 h-20" />
-              <h2 className="text-2xl font-bold text-blue-800">SmartMaterial</h2>
-              <p className="text-gray-600 text-center">
-                Use your Google account to get started quickly
-              </p>
-
-              {/* Google Button */}
-              <button button onClick={() => window.location.href = "http://localhost:5000/api/login"} className="flex items-center cursor-pointer justify-center w-full mt-6 border rounded-lg py-3 px-4 hover:bg-gray-50 transition gap-2">
-                <FcGoogle size={22} />
-                <span className="text-gray-700 font-medium">
-                  Continue with Google
-                </span>
-              </button>
-
-              {/* Use as Guest */}
-              <p className="text-sm text-gray-600 mt-6">
-                <span className="text-gray-700 font-semibold cursor-pointer hover:underline">
-                  Use as a Guest
-                </span>
-              </p>
-            </div>
-          </div>
-        </div>
-      )}
+        
     </div>
   );
 };

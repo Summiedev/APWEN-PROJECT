@@ -137,15 +137,14 @@ def recommend_materials():
 
         #return jsonify({"recommendations": top_3}), 200
         print("Top 3 recommendations:", top_3)
-        # Send back the predictions in the response
-        # Convert everything to normal Python dict
+        
         top_3 = [
     {
         'name': str(item['name']),
         'bridge Type': str(item['bridge Type']),
         'strength': str(item['strength']),
-        'cost': int(item['cost']),  # Convert np.int64 to int
-        'sustainability': int(item['sustainability'])  # Convert np.int64 to int
+        'cost': int(item['cost']),  
+        'sustainability': int(item['sustainability']) 
     }
         for item in top_3
     ]

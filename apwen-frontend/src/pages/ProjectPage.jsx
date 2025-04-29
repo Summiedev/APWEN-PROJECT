@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Navbar from "../components/NavBar";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
+
 export default function ProjectPage() {
 
 
@@ -77,7 +78,7 @@ export default function ProjectPage() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validate()) {
-      fetch("http://localhost:5000/api/recommend", {
+      fetch(`${import.meta.env.VITE_API_URL}/api/recommend`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
