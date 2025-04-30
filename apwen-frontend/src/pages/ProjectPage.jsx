@@ -256,7 +256,7 @@ const ProjectPage=()=> {
       fontSize: '1.25rem',
       color: '#1e3a8a',
       textAlign: 'center',
-      border: '4px 4px 4px 4px solid #3b82f6',
+      border: '4px solid #3b82f6',
     }}
   >
     {['Material', 'Strength', 'Cost/Unit', 'Bridge Type', 'Sustainability'].map((header, i) => (

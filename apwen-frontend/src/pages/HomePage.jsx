@@ -81,8 +81,8 @@ const Home = () => {
         <p className="text-lg text-gray-700 max-w-2xl mx-auto mb-6">
         Let AI help you pick the most suitable, cost-effective, and sustainable materials for your project—no stress, no guesswork
         </p>
-        <button onClick={() => setOpen(true)}  className="bg-[#3C6DD8]  cursor-pointer  text-white px-6 py-3 rounded-4xl hover:bg-[#3C6DD8] text-lg">
-          Get started
+        <button  className="bg-[#3C6DD8]  cursor-pointer  text-white px-6 py-3 rounded-4xl hover:bg-[#3C6DD8] text-lg">
+          <a href="/#/projects">Get Started</a>
         </button>
       </section>
 
