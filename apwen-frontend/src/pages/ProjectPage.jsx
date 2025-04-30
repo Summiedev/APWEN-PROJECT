@@ -53,7 +53,7 @@ const ProjectPage=()=> {
     const newErrors = {};
     if (!formData.loadBearing) newErrors.loadBearing = "Load-Bearing Requirement is required";
     if (!formData.budgetRange) newErrors.budgetRange = "Budget Range is required";
-    if (!formData.additionalDetails) newErrors.additionalDetails = "Additional details are required";
+
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
