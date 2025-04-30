@@ -24,7 +24,7 @@ export default function Navbar({ }) {
           <a href="/" className="text-black hover:text-black">
             Home
           </a>
-          <a href="/projects" className="text-black hover:text-black">
+          <a href="/#/projects" className="text-black hover:text-black">
             Projects
           </a>
           <a href="#BLOG" className="text-black hover:text-black">
@@ -42,7 +42,7 @@ export default function Navbar({ }) {
           
             className="bg-[#3C6DD8]  cursor-pointer  text-white px-4 py-2 rounded-4xl text-sm"
           >
-            <a href="/projects">Get Started</a>
+            <a href="/#/projects">Get Started</a>
             
           </button>
       
@@ -62,7 +62,7 @@ export default function Navbar({ }) {
           <a href="/" className="text-black hover:text-black">
             Home
           </a>
-          <a href="/projects" className="text-black hover:text-black">
+          <a href="/#/projects" className="text-black hover:text-black">
             Projects
           </a>
           <a href="#" className="text-black hover:text-black">
