@@ -256,7 +256,11 @@ const ProjectPage=()=> {
       fontSize: '1.25rem',
       color: '#1e3a8a',
       textAlign: 'center',
-      border: '4px solid #3b82f6',
+     
+      borderTop:'3px solid #3b82f6',
+      borderLeft: '3px solid #3b82f6',
+      borderRight: '3px solid #3b82f6',
+      borderBottom: '1px solid #3b82f6',
     }}
   >
     {['Material', 'Strength', 'Cost/Unit', 'Bridge Type', 'Sustainability'].map((header, i) => (
@@ -283,7 +287,8 @@ const ProjectPage=()=> {
         gridTemplateColumns: 'repeat(5, 1fr)',
         fontSize: '1.125rem',
         textAlign: 'center',
-        color: '#000000'
+        color: '#000000',
+        borderBottom: '1px solid #3b82f6',
       }}
     >
       <div style={{ padding: '1rem', border: '1px solid #3b82f6', backgroundColor: '#fff' }}>
