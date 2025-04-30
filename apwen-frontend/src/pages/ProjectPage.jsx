@@ -221,7 +221,18 @@ const ProjectPage=()=> {
     boxSizing: 'border-box',
   }}
 >
-  
+  <style>
+    {`
+      @media (max-width: 768px) {
+       
+
+        .grid-header div,
+        .grid-row div {
+          font-size: 0.95rem !important;
+        }
+      }
+    `}
+  </style>
 
   <h2
     style={{
@@ -232,34 +243,37 @@ const ProjectPage=()=> {
       marginBottom: '2.5rem',
     }}
   >
-   Based on your inputs, here are the top 3 material recommendations for your project.
+ Based on your inputs, here are the top 3 material recommendations for your project.
   </h2>
 
-  {/* Table Header */}
+  {/* Header Row */}
   <div
     className="grid-header"
     style={{
       display: 'grid',
       gridTemplateColumns: 'repeat(5, 1fr)',
-      backgroundColor: '#e3eaf6',
-      padding: '1.25rem',
       fontWeight: '700',
       fontSize: '1.25rem',
-      color: '#34495e',
-      borderTopLeftRadius: '0.5rem',
-      borderTopRightRadius: '0.5rem',
+      color: '#1e3a8a',
       textAlign: 'center',
-      border: '2px solid #3b82f6',
+      border: '4px 4px 4px 4px solid #3b82f6',
     }}
   >
-    <div>Material</div>
-    <div>Strength</div>
-    <div>Cost/Unit</div>
-    <div>Bridge Type</div>
-    <div>Sustainability</div>
+    {['Material', 'Strength', 'Cost/Unit', 'Bridge Type', 'Sustainability'].map((header, i) => (
+      <div
+        key={i}
+        style={{
+          padding: '1rem',
+          backgroundColor: '#e0e7ff',
+          border: '2px solid #3b82f6',
+        }}
+      >
+        {header}
+      </div>
+    ))}
   </div>
 
-  {/* Table Rows */}
+  {/* Content Rows */}
   {recommendations.map((item, index) => (
     <div
       key={index}
@@ -267,20 +281,25 @@ const ProjectPage=()=> {
       style={{
         display: 'grid',
         gridTemplateColumns: 'repeat(5, 1fr)',
-        backgroundColor: '#ffffff',
-        padding: '1.25rem',
         fontSize: '1.125rem',
-        color: '#2f3640',
         textAlign: 'center',
-        border: '2px solid #3b82f6',
-        borderTop: 'none',
       }}
     >
-      <div>{item.name}</div>
-      <div>{item.strength}</div>
-      <div>₦{item.cost}</div>
-      <div>{item["bridge Type"]}</div>
-      <div>♻️ {item.sustainability}/10</div>
+      <div style={{ padding: '1rem', border: '2px solid #3b82f6', backgroundColor: '#fff' }}>
+        {item.name}
+      </div>
+      <div style={{ padding: '1rem', border: '2px solid #3b82f6', backgroundColor: '#fff' }}>
+        {item.strength}
+      </div>
+      <div style={{ padding: '1rem', border: '2px solid #3b82f6', backgroundColor: '#fff' }}>
+        ₦{item.cost}
+      </div>
+      <div style={{ padding: '1rem', border: '2px solid #3b82f6', backgroundColor: '#fff' }}>
+        {item['bridge Type']}
+      </div>
+      <div style={{ padding: '1rem', border: '2px solid #3b82f6', backgroundColor: '#fff' }}>
+        ♻️ {item.sustainability}/10
+      </div>
     </div>
   ))}
 </main>
