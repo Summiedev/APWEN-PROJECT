@@ -242,7 +242,7 @@ const ProjectPage=()=> {
       marginBottom: '2.5rem',
     }}
   >
-    Top 3 Material Recommendations for Your Project
+    Based on your inputs, here are the top 3 material recommendations for your project.
   </h2>
 
   {/* Outer Table Container with Border */}
