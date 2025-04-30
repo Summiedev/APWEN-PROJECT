@@ -224,15 +224,7 @@ const ProjectPage=()=> {
   <style>
     {`
       @media (max-width: 768px) {
-        .grid-table {
-          display: flex !important;
-          flex-direction: column !important;
-        }
-
-        .grid-table > div {
-          display: grid !important;
-          grid-template-columns: 1fr !important;
-        }
+       
 
         .grid-table div > div {
           font-size: 0.95rem !important;
@@ -279,7 +271,7 @@ const ProjectPage=()=> {
           style={{
             padding: '1rem',
             backgroundColor: '#e0e7ff',
-            borderRight: i < 4 ? '2px solid #3b82f6' : 'none',
+            borderRight: i < 4 ? '2px solid #808080' : 'none',
             borderBottom: '2px solid #3b82f6',
           }}
         >
