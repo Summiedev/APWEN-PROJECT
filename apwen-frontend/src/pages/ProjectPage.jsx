@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 import Navbar from "../components/NavBar";
 import html2canvas from "html2canvas";
+import Loader from "../components/Loader";
 import jsPDF from "jspdf";
 
 const ProjectPage=()=> {
@@ -24,7 +25,7 @@ const ProjectPage=()=> {
   const [errors, setErrors] = useState({});
   const [recommendations, setRecommendations] = useState([]);
   const [isSubmitted, setIsSubmitted] = useState(false);
- 
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -78,6 +79,7 @@ const ProjectPage=()=> {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validate()) {
+      setLoading(true); // Show loader
       fetch(`${import.meta.env.VITE_API_URL}/api/recommend`, {
         method: "POST",
         headers: {
@@ -88,9 +90,10 @@ const ProjectPage=()=> {
         .then((response) => response.json())
         .then((data) => {
           setRecommendations(data.recommendations || []);
-          setIsSubmitted(true); // ✅ Move this inside then
+          setIsSubmitted(true);
         })
-        .catch((error) => console.error("Error:", error));
+        .catch((error) => console.error("Error:", error))
+        .finally(() => setLoading(false)); // Hide loader
     }
   };
   
@@ -103,7 +106,9 @@ const ProjectPage=()=> {
       <Navbar />
 
 
-      {!isSubmitted ? (
+      {loading ? (
+  <Loader />
+) : !isSubmitted ? (
         // Show Form
         <main className="flex-1 flex flex-col items-center p-8">
 
@@ -206,70 +211,70 @@ const ProjectPage=()=> {
         <div className="flex-1 flex flex-col items-center justify-center px-6 py-12">
         {/* The part to export */}
         <main
-          id="pdf-content"
-          style={{
-            color: 'blue',
-            backgroundColor: 'white',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-            padding: '3rem 1.5rem',
-          }}
-        >
-          <h2 style={{ fontSize: '2rem', fontWeight: '600', marginBottom: '2rem', textAlign: 'center' }}>
-            Based on your inputs, here are the top 3 materials recommended for your project.
-          </h2>
-      
-          <div style={{ width: '100%', maxWidth: '1200px' }}>
-            <div
-              style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(5, 1fr)',
-                textAlign: 'center',
-                gap: '0.5rem',
-                fontWeight: '600',
-                fontSize: '1.25rem',
-                marginBottom: '1rem',
-              }}
-            >
-              <div>Material</div>
-              <div>Strength</div>
-              <div>Cost/Unit</div>
-              <div>Bridge Type</div>
-              <div>Sustainability</div>
-            </div>
-      
-            {recommendations.map((item, index) => (
-              <div
-                key={index}
-                style={{
-                  display: 'grid',
-                  gridTemplateColumns: 'repeat(5, 1fr)',
-                  textAlign: 'center',
-                  gap: '0.5rem',
-                  marginBottom: '0.5rem',
-                }}
-              >
-                <div style={{ padding: '0.5rem', backgroundColor: 'white', border: '1px solid blue' }}>
-                  {item.name}
-                </div>
-                <div style={{ padding: '0.5rem', backgroundColor: 'white', border: '1px solid blue' }}>
-                  {item.strength}
-                </div>
-                <div style={{ padding: '0.5rem', backgroundColor: 'white', border: '1px solid blue' }}>
-                  ₦{item.cost}
-                </div>
-                <div style={{ padding: '0.5rem', backgroundColor: 'white', border: '1px solid blue' }}>
-                  {item["bridge Type"]}
-                </div>
-                <div style={{ padding: '0.5rem', backgroundColor: 'white', border: '1px solid blue' }}>
-                  ♻️ {item.sustainability}/10
-                </div>
-              </div>
-            ))}
-          </div>
-        </main>
+  id="pdf-content"
+  style={{
+    color: '#1a1a1a',
+    backgroundColor: '#fff',
+    fontFamily: 'Arial, sans-serif',
+    padding: '2rem',
+    maxWidth: '1000px',
+    margin: '0 auto',
+  }}
+>
+  <h2
+    style={{
+      fontSize: '1.8rem',
+      fontWeight: 'bold',
+      textAlign: 'center',
+      marginBottom: '2rem',
+      color: '#004080',
+    }}
+  >
+    Top 3 Material Recommendations for Your Project
+  </h2>
+
+  <div style={{ width: '100%' }}>
+    {/* Table Header */}
+    <div
+      style={{
+        display: 'grid',
+        gridTemplateColumns: 'repeat(5, 1fr)',
+        textAlign: 'center',
+        backgroundColor: '#e6f0ff',
+        fontWeight: 'bold',
+        padding: '0.75rem 0',
+        border: '1px solid #004080',
+        fontSize: '1rem',
+      }}
+    >
+      <div>Material</div>
+      <div>Strength</div>
+      <div>Cost/Unit</div>
+      <div>Bridge Type</div>
+      <div>Sustainability</div>
+    </div>
+
+    {/* Table Rows */}
+    {recommendations.map((item, index) => (
+      <div
+        key={index}
+        style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(5, 1fr)',
+          textAlign: 'center',
+          borderBottom: '1px solid #ccc',
+          fontSize: '0.95rem',
+        }}
+      >
+        <div style={{ padding: '0.6rem', border: '1px solid #dce6f1' }}>{item.name}</div>
+        <div style={{ padding: '0.6rem', border: '1px solid #dce6f1' }}>{item.strength}</div>
+        <div style={{ padding: '0.6rem', border: '1px solid #dce6f1' }}>₦{item.cost}</div>
+        <div style={{ padding: '0.6rem', border: '1px solid #dce6f1' }}>{item["bridge Type"]}</div>
+        <div style={{ padding: '0.6rem', border: '1px solid #dce6f1' }}>♻️ {item.sustainability}/10</div>
+      </div>
+    ))}
+  </div>
+</main>
       
         {/* The buttons are outside and visible */}
         <div className="flex gap-6 mt-12">
