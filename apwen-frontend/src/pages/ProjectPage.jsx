@@ -221,27 +221,7 @@ const ProjectPage=()=> {
     boxSizing: 'border-box',
   }}
 >
-  <style>
-    {`
-      @media (max-width: 768px) {
-        .grid-header, .grid-row {
-          grid-template-columns: 1fr !important;
-          text-align: left !important;
-        }
-
-        .grid-header > div,
-        .grid-row > div {
-          padding: 0.75rem 0 !important;
-          border-bottom: 2px solid #ccc !important;
-        }
-
-        .grid-row {
-          margin-bottom: 1.5rem;
-          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-        }
-      }
-    `}
-  </style>
+  
 
   <h2
     style={{
@@ -252,7 +232,7 @@ const ProjectPage=()=> {
       marginBottom: '2.5rem',
     }}
   >
-    Top 3 Material Recommendations for Your Project
+   Based on your inputs, here are the top 3 material recommendations for your project.
   </h2>
 
   {/* Table Header */}
