@@ -265,7 +265,7 @@ const ProjectPage=()=> {
         style={{
           padding: '1rem',
           backgroundColor: '#e0e7ff',
-          border: '2px solid #3b82f6',
+          border: '1px solid #808080',
         }}
       >
         {header}
@@ -283,21 +283,22 @@ const ProjectPage=()=> {
         gridTemplateColumns: 'repeat(5, 1fr)',
         fontSize: '1.125rem',
         textAlign: 'center',
+        color: '#000000'
       }}
     >
-      <div style={{ padding: '1rem', border: '2px solid #3b82f6', backgroundColor: '#fff' }}>
+      <div style={{ padding: '1rem', border: '1px solid #3b82f6', backgroundColor: '#fff' }}>
         {item.name}
       </div>
-      <div style={{ padding: '1rem', border: '2px solid #3b82f6', backgroundColor: '#fff' }}>
+      <div style={{ padding: '1rem', border: '1px solid #3b82f6', backgroundColor: '#fff' }}>
         {item.strength}
       </div>
-      <div style={{ padding: '1rem', border: '2px solid #3b82f6', backgroundColor: '#fff' }}>
+      <div style={{ padding: '1rem', border: '1px solid #3b82f6', backgroundColor: '#fff' }}>
         ₦{item.cost}
       </div>
-      <div style={{ padding: '1rem', border: '2px solid #3b82f6', backgroundColor: '#fff' }}>
+      <div style={{ padding: '1rem', border: '1px solid #3b82f6', backgroundColor: '#fff' }}>
         {item['bridge Type']}
       </div>
-      <div style={{ padding: '1rem', border: '2px solid #3b82f6', backgroundColor: '#fff' }}>
+      <div style={{ padding: '1rem', border: '1px solid #3b82f6', backgroundColor: '#fff' }}>
         ♻️ {item.sustainability}/10
       </div>
     </div>
