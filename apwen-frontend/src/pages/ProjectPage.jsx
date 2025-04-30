@@ -213,68 +213,99 @@ const ProjectPage=()=> {
         <main
   id="pdf-content"
   style={{
-    color: '#1a1a1a',
-    backgroundColor: '#fff',
-    fontFamily: 'Arial, sans-serif',
+    backgroundColor: '#f9fafb',
+    fontFamily: 'Segoe UI, Tahoma, sans-serif',
     padding: '2rem',
-    maxWidth: '1000px',
     margin: '0 auto',
+    maxWidth: '1200px',
+    boxSizing: 'border-box',
   }}
 >
+  <style>
+    {`
+      @media (max-width: 768px) {
+        .grid-header, .grid-row {
+          grid-template-columns: 1fr !important;
+          text-align: left !important;
+        }
+
+        .grid-header > div,
+        .grid-row > div {
+          padding: 0.75rem 0 !important;
+          border-bottom: 2px solid #ccc !important;
+        }
+
+        .grid-row {
+          margin-bottom: 1.5rem;
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+      }
+    `}
+  </style>
+
   <h2
     style={{
-      fontSize: '1.8rem',
-      fontWeight: 'bold',
+      fontSize: '2.5rem',
+      fontWeight: '700',
       textAlign: 'center',
-      marginBottom: '2rem',
-      color: '#004080',
+      color: '#2c3e50',
+      marginBottom: '2.5rem',
     }}
   >
     Top 3 Material Recommendations for Your Project
   </h2>
 
-  <div style={{ width: '100%' }}>
-    {/* Table Header */}
+  {/* Table Header */}
+  <div
+    className="grid-header"
+    style={{
+      display: 'grid',
+      gridTemplateColumns: 'repeat(5, 1fr)',
+      backgroundColor: '#e3eaf6',
+      padding: '1.25rem',
+      fontWeight: '700',
+      fontSize: '1.25rem',
+      color: '#34495e',
+      borderTopLeftRadius: '0.5rem',
+      borderTopRightRadius: '0.5rem',
+      textAlign: 'center',
+      border: '2px solid #3b82f6',
+    }}
+  >
+    <div>Material</div>
+    <div>Strength</div>
+    <div>Cost/Unit</div>
+    <div>Bridge Type</div>
+    <div>Sustainability</div>
+  </div>
+
+  {/* Table Rows */}
+  {recommendations.map((item, index) => (
     <div
+      key={index}
+      className="grid-row"
       style={{
         display: 'grid',
         gridTemplateColumns: 'repeat(5, 1fr)',
+        backgroundColor: '#ffffff',
+        padding: '1.25rem',
+        fontSize: '1.125rem',
+        color: '#2f3640',
         textAlign: 'center',
-        backgroundColor: '#e6f0ff',
-        fontWeight: 'bold',
-        padding: '0.75rem 0',
-        border: '1px solid #004080',
-        fontSize: '1rem',
+        border: '2px solid #3b82f6',
+        borderTop: 'none',
       }}
     >
-      <div>Material</div>
-      <div>Strength</div>
-      <div>Cost/Unit</div>
-      <div>Bridge Type</div>
-      <div>Sustainability</div>
+      <div>{item.name}</div>
+      <div>{item.strength}</div>
+      <div>₦{item.cost}</div>
+      <div>{item["bridge Type"]}</div>
+      <div>♻️ {item.sustainability}/10</div>
     </div>
-
-    {/* Table Rows */}
-    {recommendations.map((item, index) => (
-      <div
-        key={index}
-        style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(5, 1fr)',
-          textAlign: 'center',
-          borderBottom: '1px solid #ccc',
-          fontSize: '0.95rem',
-        }}
-      >
-        <div style={{ padding: '0.6rem', border: '1px solid #dce6f1' }}>{item.name}</div>
-        <div style={{ padding: '0.6rem', border: '1px solid #dce6f1' }}>{item.strength}</div>
-        <div style={{ padding: '0.6rem', border: '1px solid #dce6f1' }}>₦{item.cost}</div>
-        <div style={{ padding: '0.6rem', border: '1px solid #dce6f1' }}>{item["bridge Type"]}</div>
-        <div style={{ padding: '0.6rem', border: '1px solid #dce6f1' }}>♻️ {item.sustainability}/10</div>
-      </div>
-    ))}
-  </div>
+  ))}
 </main>
+
+
       
         {/* The buttons are outside and visible */}
         <div className="flex gap-6 mt-12">
