@@ -10,7 +10,7 @@ import os # import login manager setup from auth.py
 def create_app():
     app = Flask(__name__)
    
-    CORS(app, supports_credentials=True, origins="http://localhost:5173")
+    CORS(app, supports_credentials=True, origins="https://apwen-frontend-1.onrender.com")
    
 
     # Register all blueprints
